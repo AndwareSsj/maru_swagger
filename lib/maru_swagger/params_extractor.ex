@@ -1,10 +1,12 @@
 defmodule MaruSwagger.ParamsExtractor do
+  requrie IEx
   defmodule NonGetParamsGenerator do
     def generate(file_param_list, param_list, path) do
       default_body
       |> adjust_param_list(param_list)
       |> adjust_file_param_list(file_param_list)
       |> adjust_pathes(path)
+      IEx.pry
     end
 
     defp default_body do
